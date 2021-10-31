@@ -61,7 +61,7 @@ me.skills = ["Python", "JavaScript", "C#"]
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
 
-
+me.skills.splice(2)
 
 // JS Functions
 /* EXERCISE 1
