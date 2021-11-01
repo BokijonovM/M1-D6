@@ -151,7 +151,31 @@ console.log(output6)
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
-
+const whatDayIsIt = (nthDay) => {
+    if(nthDay == 1){
+        console.log("Today is Sunday")
+    }
+    else if(nthDay == 2){
+        console.log("Today is Monday")
+    }
+    else if(nthDay == 3){
+        console.log("Today is Tuesday")
+    }
+    else if(nthDay == 4){
+        console.log("Today is Wednesday")
+    }
+    else if(nthDay == 5){
+        console.log("Today is Thursday")
+    }
+    else if(nthDay == 6){
+        console.log("Today is Friday")
+    }
+    else{
+        console.log("Today is Saturday")
+    }
+}
+let output7 = whatDayIsIt(3)
+console.log(output7)
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -177,7 +201,7 @@ const rollTheDices = (number8) => {
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
 
-const isTodayMyBirthday = (day, month) => {
+const isTodayMyBirthday = (day, month) => {  //My birthday is 1st January (01.01)
     // let currentMonth = today.getMonth() + 1
     // let currentDay = today.getDate()
     if(day === 1 && month === 1){
