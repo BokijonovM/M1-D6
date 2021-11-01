@@ -250,6 +250,11 @@ console.log(output10)
    and returns the given object after deleting its property named as the given string.
 */
 
+let deleteProp = function(obj, str) {
+    delete obj[str];
+    return obj;
+  }
+
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */ 
