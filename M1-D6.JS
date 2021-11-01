@@ -129,6 +129,13 @@ console.log(outputString)
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
 
+const onlyLetters = (onlyLetterValue) => {
+    removeDigits = onlyLetterValue.replace(/[0-9]/g, '')
+    console.log(removeDigits)
+}
+let output5 = onlyLetters("Helle I am 19 years old")
+console.log(output5)
+
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
