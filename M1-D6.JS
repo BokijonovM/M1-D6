@@ -187,16 +187,25 @@ console.log(output7)
         values: [3, 3, 4]
     }
 */
-const rollTheDices = (number8) => {
-    for(let i =0; i < number8; i++){
-        dice()
-
+const rollTheDices = (num) => {
+    let diceNumbers = [];
+    let diceNumbersSum = 0;
+  
+    // Collect dice numbers from provided amount of dice rolls (num) to array
+    // Also, sum together the dice numbers
+    for(let i = 0; i < num; i++) {
+      let diceNumber = dice();
+      diceNumbers.push(diceNumber);
+      diceNumbersSum += diceNumbers[i];
     }
-
-
+  
+    return {
+      sum: diceNumbersSum,
+      values: diceNumbers
+    }
 }
-let output8 = rollTheDices(4)
-console.log(output8)
+  
+  // console.log(rollTheDices(3));
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
@@ -244,42 +253,34 @@ console.log(output10)
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */ 
-/*
-const oldestMovie = function (moviesArr) {
 
-    let movieTitle = []
-    let movieYear = []
+
+let olderMovie = function(arr) {
+    let oldestMovie = arr[0].Title;
+    let oldestMovieYear = arr[0].Year;
   
-    for (let i = 0; i < moviesArr.length; i++) {
-  
-      let moviesArrTitle = moviesArr[i].Title
-      let moviesArrYear = moviesArr[i].Year
-  
-       movieTitle.push(moviesArrTitle)
-       movieYear.push(moviesArrYear)
-  
+    for(let i = 1; i < arr.length; i++) {
+      if(oldestMovieYear > arr[i].Year) {
+        oldestMovie = arr[i].Title;
+      }
     }
-  
-    let sortedYear = movieYear.sort((a, b) => {
-      return a - b
-    })
-    console.log("Oldest movie title is: " + movieTitle[0])
-  
-    console.log("The oldest movie was produced in " + sortedYear[0])
-  
+    return oldestMovie;
 }
-*/
+let output12 = olderMovie()
+console.log(output12)
+
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
 */
-/*
+
         const countMovies = () => {
             moviesLength = movies.length
             console.log("There are " + moviesLength + " movies")
         }
         let output13 = countMovies()
-        console.log(output13)
-*/
+        //console.log(output13)
+
+
 /* EXERCISE 14
     Write a function called onlyTheTitles which creates an array with just the titles of the movies contained in the provided movies array.
 */
@@ -294,6 +295,7 @@ const onlyTheTitles = (moviesArr) => {
 }
 let output14 = onlyTheTitles()
 console.log(output14)
+
 /* EXERCISE 15
    Write a function called onlyInThisMillennium which returns only the movies produced in this millennium from the provided movies array.
 */
@@ -344,7 +346,7 @@ console.log(output14)
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
 
-/*
+
 const isItPrime = () => {
     const inputValue = parseInt(prompt("Enter a positive number: "));
     input23 = inputValue
@@ -379,7 +381,7 @@ const isItPrime = () => {
 }
 let output23 = isItPrime()
 console.log(output23)
-*/
+
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
