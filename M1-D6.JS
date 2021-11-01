@@ -69,11 +69,11 @@ me.skills.splice(2)
 */
 
 
-let randomNumbers = [1,2,3,4,5,6]
-const dice = (randomNumbers) => {
-    return randomNumbers[Math.floor(Math.random() * randomNumbers.length)];
-};
-console.log(dice(randomNumbers))
+const dice = function () {      
+    let randomInteger = Math.floor(Math.random() * 6) + 1    
+    return randomInteger  
+} 
+console.log(dice())
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
@@ -188,13 +188,21 @@ console.log(output7)
     }
 */
 const rollTheDices = (number8) => {
+    for(let i =0; i < number8; i++){
+        dice()
+
+    }
+
 
 }
+let output8 = rollTheDices(4)
+console.log(output8)
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
 const howManyDays = (date) => {
+    let today = new Date()
     currentDate = today.getDate()
     if(date < currentDate && date <= 31){
         console.log(currentDate - date + " days passed since " + date)
