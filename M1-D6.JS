@@ -237,9 +237,21 @@ console.log(output10)
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */
 
+const oldestMovie = () => {
+
+}
+
+
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
 */
+
+const countMovies = () => {
+    moviesLength = movies.length
+    console.log("There are " + moviesLength + " movies")
+}
+let output13 = countMovies()
+console.log(output13)
 
 /* EXERCISE 14
     Write a function called onlyTheTitles which creates an array with just the titles of the movies contained in the provided movies array.
