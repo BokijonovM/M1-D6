@@ -68,19 +68,60 @@ me.skills.splice(2)
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
 
+
+let randomNumbers = [1,2,3,4,5,6]
+const dice = (randomNumbers) => {
+    return randomNumbers[Math.floor(Math.random() * randomNumbers.length)];
+};
+console.log(dice(randomNumbers))
+
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
+
+const whoIsBigger = function(num1, num2){
+    if(num1 > num2){
+        console,log(num1 + " is bigger")
+    }
+    else if (num1 < num2){
+        console.log(num2 + " is bigger")
+    }
+    else{
+        console.log("Numbers are equal!")
+    }
+}
+let output = whoIsBigger(4, 6)
+console.log(output)
 
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+const splitMe = function(stringValue){
+    return stringValue.length > 0 ? stringValue.split(' ') : [];
+
+}
+var words = splitMe('Hello I am Striver');
+
+
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+const deleteOne = (stringValue2, isTrue) => {
+    if (isTrue == true) {
+        removeFirstChar = stringValue2.slice(1);
+        console.log(removeFirstChar);
+    }
+    else {
+        removeLastChar = stringValue2.slice(0, stringValue2.length - 1);
+        console.log(removeLastChar);
+    }
+
+}
+outputString = deleteOne("Hello", false)
+console.log(outputString)
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
