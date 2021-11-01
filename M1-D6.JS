@@ -227,10 +227,10 @@ const isTodayMyBirthday = (day, month) => {
         console.log("Today is your Birthday! Happy Birthday")
     }
     else{
-        console.log("Today is not your birthday! Wait", 12 - parseInt(currentMonth) + " month/months", 31 - parseInt(currentDay) + " day/days")
+        console.log("Today is not your birthday! Wait", 12 - parseInt(currentMonth) + " month/months and", 31 - parseInt(currentDay) + " day/days")
     }
 }
-let output10 = isTodayMyBirthday(1, 10)
+let output10 = isTodayMyBirthday(1, 11)
 console.log(output10)
 
 // JS Arrays & Objects
