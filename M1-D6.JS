@@ -98,11 +98,12 @@ console.log(output)
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
-const splitMe = function(stringValue){
-    return stringValue.length > 0 ? stringValue.split(' ') : [];
-
+const splitMe = (string) => {
+    stringToArray = string.split(' ')
+    console.log(stringToArray)
 }
-var words = splitMe('Hello I am Striver');
+let outputSplitMe = splitMe('Hello I am Striver')
+console.log(outputSplitMe)
 
 
 /* EXERCISE 4
