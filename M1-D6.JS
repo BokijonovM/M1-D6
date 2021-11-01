@@ -211,18 +211,18 @@ console.log(output9)
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
 
-const isTodayMyBirthday = (day, month) => {  //My birthday is 1st January (01.01)
-    // let currentMonth = today.getMonth() + 1
-    // let currentDay = today.getDate()
-    if(day === 1 && month === 1){
+const isTodayMyBirthday = (day, month) => { 
+    let today = new Date()
+    let currentMonth = today.getMonth() + 1
+    let currentDay = today.getDate()
+    if(day === 1 && month === 1){ //My birthday is 1st January (01.01)
         console.log("Today is your Birthday! Happy Birthday")
     }
     else{
-        console.log("Today is not your birthday! Wait")
+        console.log("Today is not your birthday! Wait", 12 - parseInt(currentMonth) + " month/months", 31 - parseInt(currentDay) + " day/days")
     }
-    
 }
-let output10 = isTodayMyBirthday(1, 1)
+let output10 = isTodayMyBirthday(1, 10)
 console.log(output10)
 
 // JS Arrays & Objects
