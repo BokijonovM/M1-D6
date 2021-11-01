@@ -140,6 +140,14 @@ console.log(output5)
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+const isThisAnEmail = (string6) => {
+    const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi;
+    return regexExp.test(string6)
+}
+let output6 = isThisAnEmail("mbm.uzb@gmail.com")
+console.log(output6)
+
+
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
