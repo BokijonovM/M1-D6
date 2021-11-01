@@ -238,9 +238,15 @@ console.log(output10)
 */
 
 const oldestMovie = () => {
-
+    emptyArray = []
+    for(let i = 0; i <= movies.length; i++){
+            let emptyArray = i.Year
+            sortedArray = emptyArray.sort(function(a, b){return a-b})
+            console.log(sortedArray[0])
+    }
 }
-
+let output12 = oldestMovie()
+console.log(output12)
 
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
@@ -306,6 +312,42 @@ console.log(output13)
 /* EXERCISE 23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+
+
+const isItPrime = () => {
+    const inputValue = parseInt(prompt("Enter a positive number: "));
+    input23 = inputValue
+    let isPrime = true
+
+    // check is number equal to 1
+    if (input23 ===1){
+        console.log("1 is neither prime nor composite number")
+
+    }
+
+    // check in number is greater than 1
+    else if(input23 > 1){
+        // looping through 2 to greater than 1
+        for(let i = 2; i<input23; i++){
+            if (input23 % i == 0){
+                isPrime =false;
+                break
+            }
+        }
+        if (isPrime){
+            console.log(`${input23} is a prime number`)
+
+        }
+        else{
+            console.log(`${input23} is not a prime number`)
+        }
+    }
+    else{
+        console.log("The number is not a prime number!")
+    }
+}
+let output23 = isItPrime()
+console.log(output23)
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
