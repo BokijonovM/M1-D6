@@ -194,6 +194,15 @@ const rollTheDices = (number8) => {
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
+const howManyDays = (date) => {
+    currentDate = today.getDate()
+    if(date < currentDate && date <= 31){
+        console.log(currentDate - date + " days passed since " + date)
+    }
+    // I have to do some calculation for currentDate < date but my mind does not want to calculate it:)
+}
+let output9 = howManyDays(3)
+console.log(output9)
 
 
 
