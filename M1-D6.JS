@@ -152,24 +152,44 @@ console.log(output6)
    Write a function called whatDayIsIt that should return the current day of the week.
 */
 
+
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
     and return an object containing a sum property holding the sum of all values extracted
-    and a values array containing the single values of the dicerolls themselves.
+    and a values array containing the single values of the diceRolls themselves.
     Example: RollTheDices(3) => returns {
         sum: 10
         values: [3, 3, 4]
     }
 */
+const rollTheDices = (number8) => {
+
+}
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
 
+
+
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
+
+const isTodayMyBirthday = (day, month) => {
+    // let currentMonth = today.getMonth() + 1
+    // let currentDay = today.getDate()
+    if(day === 1 && month === 1){
+        console.log("Today is your Birthday! Happy Birthday")
+    }
+    else{
+        console.log("Today is not your birthday! Wait")
+    }
+    
+}
+let output10 = isTodayMyBirthday(1, 1)
+console.log(output10)
 
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
