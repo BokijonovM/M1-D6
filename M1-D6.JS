@@ -267,7 +267,7 @@ let olderMovie = function(arr) {
     return oldestMovie;
 }
 let output12 = olderMovie()
-console.log(output12)
+//console.log(output12)
 
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
@@ -294,11 +294,24 @@ const onlyTheTitles = (moviesArr) => {
     console.log(moviesTitle)
 }
 let output14 = onlyTheTitles()
-console.log(output14)
+//console.log(output14)
 
 /* EXERCISE 15
    Write a function called onlyInThisMillennium which returns only the movies produced in this millennium from the provided movies array.
 */
+
+const onlyInThisMillennium = (arr) => {
+    millenniumMovies = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].Year > 2000){
+            millenniumMovies.push[arr[i]]
+        }
+        return millenniumMovies
+    }
+}
+let output15 = onlyInThisMillennium()
+//console.log(output15)
+
 
 /* EXERCISE 16 
     Write a function called getMovieById which receives an id as a parameter and returns the movie with the given id from the provided movies array.
