@@ -250,7 +250,7 @@ console.log(output10)
    and returns the given object after deleting its property named as the given string.
 */
 
-let deleteProp = function(obj, str) {
+const deleteProp = (obj, str) => {
     delete obj[str];
     return obj;
   }
@@ -260,7 +260,7 @@ let deleteProp = function(obj, str) {
 */ 
 
 
-let olderMovie = function(arr) {
+const olderMovie = (arr) => {
     let oldestMovie = arr[0].Title;
     let oldestMovieYear = arr[0].Year;
   
@@ -325,7 +325,7 @@ let output15 = onlyInThisMillennium()
 const getMovieById = (id) => {
     for(let i = 0; i < movies.length; i++) {
       if(movies[i].imdbID === id) {
-        return movies[i];
+          return movies[i];
       }
     }
 }
@@ -335,7 +335,7 @@ const getMovieById = (id) => {
     Write a function called sumAllTheYears which returns the sum of all the years in which the movies in the provided movies array have been produced.
 */
 
-let sumAllTheYears = function() {
+let sumAllTheYears = () => {
     let yearsSummed = parseInt(movies[0].Year);
   
     for(let i = 1; i < movies.length; i++) {
@@ -358,6 +358,10 @@ let sumAllTheYears = function() {
 /* EXERCISE 20
    Write a function called "removeIndex" which receives a number as a parameter and returns the provided movies array without the element in the given position.
 */
+const removeIndex = (num) => {
+    movies.splice(num,1);
+    return movies;
+  }
 
 // [EXTRAS] JS Advanced
 
