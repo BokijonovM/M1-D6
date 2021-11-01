@@ -200,6 +200,7 @@ const howManyDays = (date) => {
         console.log(currentDate - date + " days passed since " + date)
     }
     // I have to do some calculation for currentDate < date but my mind does not want to calculate it:)
+    // I could not do it
 }
 let output9 = howManyDays(3)
 console.log(output9)
