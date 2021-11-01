@@ -243,34 +243,57 @@ console.log(output10)
 
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
-*/
+*/ 
+/*
+const oldestMovie = function (moviesArr) {
 
-const oldestMovie = () => {
-    emptyArray = []
-    for(let i = 0; i <= movies.length; i++){
-            let emptyArray = i.Year
-            sortedArray = emptyArray.sort(function(a, b){return a-b})
-            console.log(sortedArray[0])
+    let movieTitle = []
+    let movieYear = []
+  
+    for (let i = 0; i < moviesArr.length; i++) {
+  
+      let moviesArrTitle = moviesArr[i].Title
+      let moviesArrYear = moviesArr[i].Year
+  
+       movieTitle.push(moviesArrTitle)
+       movieYear.push(moviesArrYear)
+  
     }
+  
+    let sortedYear = movieYear.sort((a, b) => {
+      return a - b
+    })
+    console.log("Oldest movie title is: " + movieTitle[0])
+  
+    console.log("The oldest movie was produced in " + sortedYear[0])
+  
 }
-let output12 = oldestMovie()
-console.log(output12)
-
+*/
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
 */
-
-const countMovies = () => {
-    moviesLength = movies.length
-    console.log("There are " + moviesLength + " movies")
-}
-let output13 = countMovies()
-console.log(output13)
-
+/*
+        const countMovies = () => {
+            moviesLength = movies.length
+            console.log("There are " + moviesLength + " movies")
+        }
+        let output13 = countMovies()
+        console.log(output13)
+*/
 /* EXERCISE 14
     Write a function called onlyTheTitles which creates an array with just the titles of the movies contained in the provided movies array.
 */
 
+const onlyTheTitles = (moviesArr) => {
+    let moviesTitle = []
+    for(let i = 0; i < movies.length; i++){
+        let moviesArrTitle = moviesArr[i].Title
+        moviesTitle.push(moviesArrTitle)
+    }
+    console.log(moviesTitle)
+}
+let output14 = onlyTheTitles()
+console.log(output14)
 /* EXERCISE 15
    Write a function called onlyInThisMillennium which returns only the movies produced in this millennium from the provided movies array.
 */
@@ -321,7 +344,7 @@ console.log(output13)
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
 
-
+/*
 const isItPrime = () => {
     const inputValue = parseInt(prompt("Enter a positive number: "));
     input23 = inputValue
@@ -356,6 +379,7 @@ const isItPrime = () => {
 }
 let output23 = isItPrime()
 console.log(output23)
+*/
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
@@ -476,3 +500,5 @@ const movies = [
         "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
     },
   ];
+
+  
